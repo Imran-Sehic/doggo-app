@@ -1,0 +1,24 @@
+.wrapper {
+    margin: 8rem;
+}
+
+/*smaller desktop*/
+@media screen and (max-width: 1150px) {
+    .wrapper {
+        margin: 5rem
+    }
+}
+
+/*smaller tablet*/
+@media screen and (max-width: 600px) {
+    .wrapper {
+        margin: 3rem;
+    }
+}
+
+/*mobile*/
+@media screen and (max-width: 500px) {
+    .wrapper {
+        margin: 1rem;
+    }
+}

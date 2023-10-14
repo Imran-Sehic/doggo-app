@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## The Doggo App
 
-## Getting Started
+This is the Doggo App, the application for getting to know dogs by different breeds and sub-breeds.
+This is actually a home-assignment done and developed under the name "Doggo" using **React.js** and **Next.js** as a part of an interview for a company.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project structure
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project structure is as follows:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- app - the main app folder containing all source code
+  - **\_\_mocks\_\_** - the folder containing mock data for the tests
+  - **\_\_test\_\_** - the folder containing actual unit and integration tests
+  - **about** - the folder containing the about route page
+  - **components** - the folder containing main components
+  - **queries** - the folder containing queries made to retrieve breeds data and dogs images
+  - **types** - the folder containing data types and interfaces
+  - **ui-kit** - the folder containing smaller util components (CTA components) shared across main components
+  - **[other files]** - like the homepage file, layout file, custom 404 page and global css
+- **public** - the folder containing image assests used as background images
+- **[other files and folders]** - test, next.js and typescript config files
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## Starting the app
 
-To learn more about Next.js, take a look at the following resources:
+You can start the app by using the `npm run dev` command and it will be available locally at the `3000` port.
+Another way is to run a production build by entering in the console the `npm run build` command and then starting the server with `npm start`.
+To run the tests written in **jest** you can run the `npm run test` command in the terminal and the tests should be executed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Docker
 
-## Deploy on Vercel
+This project provides the ability of being executed in a docker container.
+All you have to do is to build the container with the command `docker build -t [instance-name] [build-directory]` and then later on start the container by executing the command `docker run -dp [external-port]:[internal:port] [instance-name]` after which you should be able to access you application at the specified port.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To have a look at the running containers in docker you can execute the following command: `docker ps`.
