@@ -9,17 +9,17 @@ This is actually a home-assignment done and developed under the name "Doggo" usi
 
 The project structure is as follows:
 
-- app - the main app folder containing all source code
-  - **\_\_mocks\_\_** - the folder containing mock data for the tests
-  - **\_\_test\_\_** - the folder containing actual unit and integration tests
-  - **about** - the folder containing the about route page
-  - **components** - the folder containing main components
-  - **queries** - the folder containing queries made to retrieve breeds data and dogs images
-  - **types** - the folder containing data types and interfaces
-  - **ui-kit** - the folder containing smaller util components (CTA components) shared across main components
-  - **[other files]** - like the homepage file, layout file, custom 404 page and global css
-- **public** - the folder containing image assests used as background images
-- **[other files and folders]** - test, next.js and typescript config files
+- `app` - the main app folder containing all source code
+  - `__mocks__` - the folder containing mock data for the tests
+  - `__test__` - the folder containing actual unit and integration tests
+  - `about` - the folder containing the about route page
+  - `components` - the folder containing main components
+  - `queries` - the folder containing queries made to retrieve breeds data and dogs images
+  - `types` - the folder containing data types and interfaces
+  - `ui-kit` - the folder containing smaller util components (CTA components) shared across main components
+  - `[other files]` - like the homepage file, layout file, custom 404 page and global css
+- `public` - the folder containing image assests used as background images
+- `[other files and folders]` - test, next.js and typescript config files
 
 ---
 
