@@ -22,6 +22,7 @@ const UIListing: React.FC<UIListingInterface> = ({
       <h2 className={styles.heading} data-testid={"listing-heading"}>
         {"Results for "}
         <span>{breed}</span>
+        {/* We avoid putting sub-breed text value in the heading if searched only by breed */}
         {subBreed !== "All" ? ", " : ""}
         {subBreed !== "All" ? <span>{subBreed}</span> : ""}
       </h2>

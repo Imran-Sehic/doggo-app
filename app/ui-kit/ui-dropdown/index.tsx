@@ -30,6 +30,7 @@ const UIDropdown: React.FC<UIDropdownInterface> = ({
     };
   });
 
+  // Setting closing delay to apply fade-out animation before setting expanded to false and unmount dropdown from the DOM
   const setClosingAnimation = async () => {
     if (expanded) {
       setClosing(true);
@@ -38,6 +39,7 @@ const UIDropdown: React.FC<UIDropdownInterface> = ({
     }
   };
 
+  // Closing dropdown if clicked away (anywhere else on the screen)
   const handleClickAway = async (event: MouseEvent) => {
     if (
       dropdownRef.current &&
@@ -64,9 +66,6 @@ const UIDropdown: React.FC<UIDropdownInterface> = ({
             await setClosingAnimation();
             setExpanded(!expanded);
           }}
-          data-testid={`selected-option-${
-            type === DropdownType.BREED ? "breed" : "sub-breed"
-          }`}
         >
           {option}
         </div>
@@ -77,9 +76,9 @@ const UIDropdown: React.FC<UIDropdownInterface> = ({
                 <div
                   key={index}
                   className={styles.option}
-                  onClick={() => {
+                  onClick={async () => {
                     setOption(item);
-                    //await setClosingAnimation();
+                    await setClosingAnimation();
                     setExpanded(false);
                   }}
                 >

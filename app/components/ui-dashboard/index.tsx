@@ -25,6 +25,7 @@ const UIDashboard: React.FC<UIDashboardInterface> = ({
     breeds[breed].length > 0 ? breeds[breed][0] : "All"
   );
 
+  // Once the breed selection changes we reset sub-breeds to "All" to avoid searching by unexisting sub-breed on a selected breed
   useEffect(() => {
     setSubBreed("All");
   }, [breed]);

@@ -2,19 +2,14 @@ import { mockUIDropdownInterface } from "@/__mocks__";
 import UIDropdown from "@/ui-kit/ui-dropdown";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 
-test("UIDropdown renders correctly and behaves as expected", async () => {
-  // Arrange
+test("dropdown component renders correctly and behaves as expected", async () => {
   render(<UIDropdown {...mockUIDropdownInterface} />);
 
-  // Act
   const heading = screen.getByText("Breed");
   const selectedOption = screen.getByText("Option1");
 
-  // Assert
-  // Heading
   expect(heading).toBeInTheDocument();
-
-  // Dropdown selected option
+  // Default option should be selected
   expect(selectedOption).toBeInTheDocument();
 
   // Dropdown is initially closed

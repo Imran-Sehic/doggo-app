@@ -25,7 +25,7 @@ The project structure is as follows:
 
 ## Starting the app
 
-You can start the app by using the `npm run dev` command and it will be available locally at the `3000` port.
+Prior to starting any app in Node.js you have to install the needed packages for the app itself by running the command `npm install` and then you can start the app by using the `npm run dev` command and it will be available locally at the `3000` port.
 Another way is to run a production build by entering in the console the `npm run build` command and then starting the server with `npm start`.
 To run the tests written in **jest** you can run the `npm run test` command in the terminal and the tests should be executed.
 
