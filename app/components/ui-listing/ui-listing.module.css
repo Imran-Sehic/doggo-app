@@ -16,13 +16,20 @@
 .image {
     width: 100%;
     aspect-ratio: 1 / 1;
-    border-radius: 35px;
+    border-radius: 15px;
 }
 
 .image > img {
     height: 100%;
     width: 100%;
     box-shadow: 10px 10px 5px gray;
+    border: 10px solid lightblue;
+    cursor: pointer;
+    transition: 0.1s all ease-in-out;
+}
+
+.image > img:hover {
+    opacity: 0.7;
 }
 
 /*bigger tablet*/
@@ -30,10 +37,14 @@
     .imageWrapper {
         gap: 20px;
     }
+
+    .image > img {
+        border: 7px solid lightblue;
+    }
 }
 
 /*smaller tablet*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .imageWrapper {
         display: flex;
         flex-direction: column;
@@ -42,6 +53,10 @@
 
     .image {
         width: 70%;
+    }
+
+    .image > img {
+        border: 10px solid lightblue;
     }
 }
 
